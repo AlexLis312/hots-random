@@ -32,7 +32,7 @@ function randomChoice() {
   randomBox.push(...heroList);
   console.log(randomBox);
   randomBox.forEach((hero) => {
-    markupIcon(hero.icon, hero.role);
+    markupIcon(hero.icon, hero.role, hero.name);
   });
 
   randomWhell(randomBox);
@@ -48,7 +48,7 @@ function choice(event) {
   document.querySelectorAll("img[data-role]").forEach((img) => img.remove());
 
   randomBox.forEach((hero) => {
-    markupIcon(hero.icon, hero.role);
+    markupIcon(hero.icon, hero.role, hero.name);
   });
 
   // if (event.target.checked) {
@@ -70,10 +70,11 @@ function choice(event) {
   return randomBox;
 }
 
-function markupIcon(heroIconSrc, heroRole) {
+function markupIcon(heroIconSrc, heroRole, heroName) {
   const imgElement = document.createElement("img");
   imgElement.src = heroIconSrc;
-  imgElement.alt = "Image description";
+  console.log(heroIconSrc);
+  imgElement.alt = `${heroName}`;
   imgElement.width = 64;
   imgElement.height = 64;
   imgElement.setAttribute("data-role", heroRole);

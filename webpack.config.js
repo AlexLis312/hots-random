@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "docs"),
     filename: "index.js",
+    publicPath: "/hots-random/",
   },
   module: {
     rules: [
@@ -37,5 +38,6 @@ module.exports = {
   devServer: {
     port: 1542,
     open: true,
+    publicPath: "/hots-random/",
   },
 };
