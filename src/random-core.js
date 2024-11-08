@@ -17,7 +17,7 @@ const randomInt = (number) => {
 function randomWhell(array) {
   const randomNum = randomInt(array.length);
   const randomHero = array[randomNum];
-  markupModal(randomHero.icon, randomHero.url);
+  markupModal(randomHero.icon, randomHero.url, randomHero.role, randomHero.name);
   // markupIcon(randomHero.icon);
   console.log(randomHero.name);
   console.log(randomNum);
@@ -81,7 +81,7 @@ function markupIcon(heroIconSrc, heroRole, heroName) {
   document.body.appendChild(imgElement);
   return imgElement;
 }
-function markupModal(heroIconSrc, heroUrl) {
+function markupModal(heroIconSrc, heroUrl, heroRole, heroName) {
   const modalElement = document.createElement("div");
   const heroLink = document.createElement("a");
   modalElement.src = heroIconSrc;
@@ -92,7 +92,7 @@ function markupModal(heroIconSrc, heroUrl) {
   heroLink.textContent = heroUrl;
   heroLink.href = heroUrl;
   document.body.appendChild(modalElement);
-  modalElement.append(heroLink, markupIcon(heroIconSrc));
+  modalElement.append(heroLink, markupIcon(heroIconSrc, heroRole, heroName));
 }
 
 console.log(heroList);
