@@ -1,8 +1,8 @@
 import heroClass from "./heroCreate";
 
-import vallaIcon from "../img/valla.jpg";
+import vallaIcon from "./img/valla.jpg";
 import valeeraIcon from "./img/valeera.jpg";
-import illidanIcon from "/img/illidan.jpg";
+import illidanIcon from "./img/illidan.jpg";
 import muradinIcon from "./img/muradin.jpg";
 import yrelIcon from "./img/yrel.jpg";
 import aurielIcon from "./img/auriel.jpg";

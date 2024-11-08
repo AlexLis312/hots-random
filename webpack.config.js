@@ -2,10 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/random-core.js",
   output: {
     path: path.resolve(__dirname, "docs"),
-    filename: "HOTS-random.js",
+    filename: "index.js",
   },
   module: {
     rules: [
@@ -17,6 +17,7 @@ module.exports = {
             options: {
               name: "img/[name].[hash].[ext]",
               outputPath: "img",
+              publicPath: "/img",
             },
           },
         ],
