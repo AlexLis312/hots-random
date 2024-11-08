@@ -1,3 +1,4 @@
+// publicPath: '/hots-random/',
 import { heroList } from "./data-heroes.js";
 import "./css/style.scss";
 
