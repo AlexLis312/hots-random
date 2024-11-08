@@ -2,9 +2,13 @@
   "name": "hots-random",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
-    "prod": "webpack --mode=production",
-    "start": "webpack --mode=development"
+    "dev": "webpack-dev-server --mode=development src/*.html",
+    "prod": "webpack --mode=production src/*.html",
+    "start": "webpack --mode=development src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexLis312/hots-random.git"
   },
   "keywords": [],
   "author": "Alex XeX <metalstyle545@gmail.com>",
