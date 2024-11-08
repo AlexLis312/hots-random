@@ -2,9 +2,9 @@
   "name": "hots-random",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development src/*.html",
-    "prod": "webpack --mode=production src/*.html",
-    "start": "webpack --mode=development src/*.html"
+    "dev": "webpack-dev-server --mode=development ",
+    "prod": "webpack --mode=production ",
+    "start": "webpack --mode=development "
   },
   "repository": {
     "type": "git",
