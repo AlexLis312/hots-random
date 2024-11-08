@@ -73,6 +73,7 @@ function choice(event) {
 function markupIcon(heroIconSrc, heroRole) {
   const imgElement = document.createElement("img");
   imgElement.src = heroIconSrc;
+  imgElement.alt = "Image description";
   imgElement.width = 64;
   imgElement.height = 64;
   imgElement.setAttribute("data-role", heroRole);
