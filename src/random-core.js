@@ -1,4 +1,4 @@
-// publicPath: '/hots-random/',
+// /hots-random
 import { heroList } from "./data-heroes.js";
 import "./css/style.scss";
 
@@ -19,7 +19,7 @@ function randomWhell(array) {
   const randomNum = randomInt(array.length);
   const randomHero = array[randomNum];
   markupModal(randomHero.icon, randomHero.url, randomHero.role, randomHero.name);
-  // markupIcon(randomHero.icon);
+
   console.log(randomHero.name);
   console.log(randomNum);
   return randomHero;
@@ -82,6 +82,7 @@ function markupIcon(heroIconSrc, heroRole, heroName) {
   document.body.appendChild(imgElement);
   return imgElement;
 }
+
 function markupModal(heroIconSrc, heroUrl, heroRole, heroName) {
   const modalElement = document.createElement("div");
   const heroLink = document.createElement("a");
