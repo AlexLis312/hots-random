@@ -465,14 +465,7 @@ heroList.push(
     "https://www.icy-veins.com/heroes/maiev-build-guide",
     maievIcon
   ),
-  new heroClass(
-    "maiev",
-    "dd",
-    "melee",
-    "https://www.icy-veins.com/heroes/maiev-build-guide",
-    maievIcon
-  ),
-  new heroClass(
+  heroClass(
     "malfurion",
     "heal",
     "none",
