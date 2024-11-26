@@ -26,6 +26,7 @@ function randomWhell(array) {
 }
 
 function buttonClick() {
+  buttonRandom.disabled = false;
   randomWhell(randomBox);
 }
 
@@ -40,6 +41,7 @@ function randomChoice() {
 }
 
 function choice(event) {
+  buttonRandom.disabled = true;
   const checkedRoles = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(
     (checkbox) => checkbox.value
   );
