@@ -5,6 +5,7 @@ import "./css/style.scss";
 const checkbox = document.querySelector(".checkbox");
 const buttonChoice = document.querySelector("button");
 const buttonRandom = document.querySelector(".random");
+const iconsContainer = document.querySelector(".iconBox");
 let randomBox = [];
 
 checkbox.addEventListener("input", choice);
@@ -16,6 +17,7 @@ const randomInt = (number) => {
 };
 
 function randomWhell(array) {
+  clearBox();
   const randomNum = randomInt(array.length);
   const randomHero = array[randomNum];
   markupModal(randomHero.icon, randomHero.url, randomHero.role, randomHero.name);
@@ -81,7 +83,7 @@ function markupIcon(heroIconSrc, heroRole, heroName) {
   imgElement.width = 64;
   imgElement.height = 64;
   imgElement.setAttribute("data-role", heroRole);
-  document.body.appendChild(imgElement);
+  iconsContainer.appendChild(imgElement);
   return imgElement;
 }
 
@@ -95,8 +97,12 @@ function markupModal(heroIconSrc, heroUrl, heroRole, heroName) {
   modalElement.classList.add("active");
   heroLink.textContent = heroUrl;
   heroLink.href = heroUrl;
-  document.body.appendChild(modalElement);
+  iconsContainer.appendChild(modalElement);
   modalElement.append(heroLink, markupIcon(heroIconSrc, heroRole, heroName));
+}
+
+function clearBox() {
+  iconsContainer.innerHTML = "";
 }
 
 console.log(heroList);
