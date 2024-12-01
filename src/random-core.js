@@ -5,12 +5,18 @@ import "./css/style.scss";
 const checkbox = document.querySelector(".checkbox");
 const buttonChoice = document.querySelector("button");
 const buttonRandom = document.querySelector(".random");
+const buttonCustom = document.querySelector(".custom");
+const buttonCustomRandom = document.querySelector(".custom-random");
 const iconsContainer = document.querySelector(".iconBox");
 let randomBox = [];
+let customBox = [];
 
 checkbox.addEventListener("input", choice);
 buttonRandom.addEventListener("click", randomChoice);
+buttonCustom.addEventListener("click", customChoice);
+buttonCustomRandom.addEventListener("click", customRandom);
 buttonChoice.addEventListener("click", buttonClick);
+iconsContainer.addEventListener("click", onHeroClick);
 
 const randomInt = (number) => {
   return Math.floor(Math.random() * number);
@@ -27,14 +33,32 @@ function randomWhell(array) {
   return randomHero;
 }
 
+function onHeroClick(e) {
+  console.log(e.target);
+  e.target.classList.add("custom-border");
+  randomBox.filter((hero) => (e.target.alt === hero.name ? customBox.push(hero) : ""));
+  console.log(customBox);
+
+  return customBox;
+}
+
+function customRandom() {
+  randomWhell(customBox);
+}
 function buttonClick() {
   buttonRandom.disabled = false;
   randomWhell(randomBox);
 }
 
+function customChoice() {
+  randomBox.push(...heroList);
+  randomBox.forEach((hero) => {
+    markupIcon(hero.icon, hero.role, hero.name);
+  });
+}
+
 function randomChoice() {
   randomBox.push(...heroList);
-  console.log(randomBox);
   randomBox.forEach((hero) => {
     markupIcon(hero.icon, hero.role, hero.name);
   });
