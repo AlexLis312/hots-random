@@ -1,7 +1,8 @@
 body {
-  background-color: blue;
+  background-color: rgb(19, 10, 44);
   background-image: url(https://i.imgur.com/OcFygJu.jpg);
-  font-family: sans-serif;
+  font-family: Open Sans, sans-serif;
+
   color: white;
 }
 
@@ -16,7 +17,6 @@ h1 {
 }
 
 input {
-  font-size: 24px;
   text-align: center;
 
   background-color: #fff;
@@ -25,7 +25,21 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
+  border: 2px solid #1a163b;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #1a163b;
+
+  cursor: pointer;
+  transition: 0.3s;
 }
+button:hover {
+  background-color: #1a163b;
+  color: white;
+}
+
 .random {
   display: flex;
   justify-content: center;
@@ -70,4 +84,34 @@ button {
 .modal.active {
   opacity: 1;
   visibility: visible;
+}
+
+.link {
+  text-decoration-line: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1a163b;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #1a163b;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link:hover {
+  background-color: #1a163b;
+  color: white;
+}
+
+p {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+
+  font-weight: 700;
 }

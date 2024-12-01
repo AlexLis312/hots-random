@@ -89,16 +89,21 @@ function markupIcon(heroIconSrc, heroRole, heroName) {
 
 function markupModal(heroIconSrc, heroUrl, heroRole, heroName) {
   const modalElement = document.createElement("div");
+  const nameText = document.createElement("p");
   const heroLink = document.createElement("a");
+
   modalElement.src = heroIconSrc;
   modalElement.width = 64;
   modalElement.height = 64;
   modalElement.classList.add("modal");
   modalElement.classList.add("active");
-  heroLink.textContent = heroUrl;
+  nameText.textContent = heroName;
+  heroLink.classList.add("link");
+  heroLink.textContent = "Guide";
   heroLink.href = heroUrl;
+
   iconsContainer.appendChild(modalElement);
-  modalElement.append(heroLink, markupIcon(heroIconSrc, heroRole, heroName));
+  modalElement.append(nameText, markupIcon(heroIconSrc, heroRole, heroName), heroLink);
 }
 
 function clearBox() {
