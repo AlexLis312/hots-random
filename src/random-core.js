@@ -10,6 +10,7 @@ const buttonCustomRandom = document.querySelector(".custom-random");
 const iconsContainer = document.querySelector(".iconBox");
 let randomBox = [];
 let customBox = [];
+let box = [];
 
 checkbox.addEventListener("input", choice);
 buttonRandom.addEventListener("click", randomChoice);
